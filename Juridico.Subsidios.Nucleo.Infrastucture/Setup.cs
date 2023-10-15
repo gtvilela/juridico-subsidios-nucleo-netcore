@@ -15,16 +15,11 @@ namespace Juridico.Subsidios.Nucleo.Infrastucture
             services.AddScoped<IDocumentoGateway, DocumentoGateway>();
             services.AddScoped<IVeiculoGateway, VeiculoGateway>();
 
-            //services.AddHttpClient<IAclGateway, AclGateway>(client =>
-            //{
-            //    var clientId = Environment.GetEnvironmentVariable(InfraEnvironmentVariables.ClientIdAcl);
-            //    if (!string.IsNullOrWhiteSpace(clientId))
-            //        client.DefaultRequestHeaders.Add("client_id", clientId);
-            //    else
-            //        throw new ArgumentException($"{InfraEnvironmentVariables.ClientIdAcl} não pode ser nulo ou vazio");
+            services.AddHttpClient<IAclGateway, AclGateway>(client =>
+            {
+                client.BaseAddress = new Uri(Environment.GetEnvironmentVariable("URL_JURIDICO_ACL"));
+            });
 
-            //    client.BaseAddress = new Uri(Environment.GetEnvironmentVariable(InfraEnvironmentVariables.UrlAlContratos));
-            //}).AddPolicyHandler(PollyConfig.RetryPolicyBasico());
 
             return services;
         }
