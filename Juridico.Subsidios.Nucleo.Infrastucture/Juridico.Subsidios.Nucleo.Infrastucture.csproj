@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Juridico.Nucleo.Subsidios.Domain\Juridico.Subsidios.Nucleo.Domain.csproj" />
+    <PackageReference Include="ConfigCat.Client" Version="8.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Juridico.Subsidios.Nucleo.Domain\Juridico.Subsidios.Nucleo.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace Juridico.Subsidios.Nucleo.Infrastucture.Services
 {
-    public class VeiculoGateway
+    public class RabbitMqService
     {
     }
 }
