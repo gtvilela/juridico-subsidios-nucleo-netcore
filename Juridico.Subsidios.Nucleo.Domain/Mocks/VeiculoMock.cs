@@ -3,16 +3,17 @@
     public static class VeiculoMock
     {
         public const string RETORNO_VEICULO = @"{
-                                                ""codigoCliente"": ""000122276"",
-                                                ""nome"":""OMG0248"",
-                                                ""primeiroNome"":""Gabriela"",
-                                                ""sobrenome"":""Vilela"",
-                                                ""segmento"":""B"",
-                                                ""documento"":""1323653706"",
-                                                ""ativo"":""true"",
-                                                ""nomeSegmento"":"""",
-                                                ""centroOperacao"":"""",
-                                                ""ativoNpc"":""true""
+                                                ""codigoVeiculo"": ""000122276"",
+                                                ""placa"":""OMG0248"",
+                                                ""grupo"":""F"",
+                                                ""modelo"":""Onix Premier Turbo"",
+                                                ""anoModelo"":""2024"",
+                                                ""codigoFabricante"":""12"",
+                                                ""hodometroRetirada"":""20456"",
+                                                ""hodometroDevolucao"":""20612"",
+                                                ""tanqueSaida"":""50"",
+                                                ""tanqueRetorno"":""48"",
+                                                ""ultimoContrato"": ""XXX1234000""
                                             }";
         
     }

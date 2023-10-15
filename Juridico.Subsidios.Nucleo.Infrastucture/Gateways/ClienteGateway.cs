@@ -7,7 +7,7 @@ namespace Juridico.Subsidios.Nucleo.Infrastucture.Gateways
 {
     public class ClienteGateway : IClienteGateway
     {
-        public ClienteModel ObterDadosVeiculo(string codigoCliente)
+        public ClienteModel ObterDadosCliente(string codigoCliente)
         {
             Console.WriteLine($"Busca de dados do cliente de código {codigoCliente}.");
             //Mock da chamada de API do time do núcleo de clientes

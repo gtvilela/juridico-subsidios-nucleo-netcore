@@ -4,6 +4,6 @@ namespace Juridico.Subsidios.Nucleo.Domain.Interfaces.Gateways
 {
     public interface IClienteGateway
     {
-        ClienteModel ObterDadosVeiculo(string codigoCliente);
+        ClienteModel ObterDadosCliente(string codigoCliente);
     }
 }

@@ -4,6 +4,6 @@ namespace Juridico.Subsidios.Nucleo.Domain.Interfaces.Services
 {
     public interface IInformacaoAdicionalService
     {
-        List<StatusProcessamentoModel> ProcessarInformacaoAdicional(string codigo, string codigoProcesso, string codigoTipoInformacaoAdicional);
+        List<StatusProcessamentoModel> ProcessarInformacaoAdicional(string codigo, string codigoProcesso);
     }
 }

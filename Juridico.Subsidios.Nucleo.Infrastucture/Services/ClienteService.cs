@@ -21,7 +21,7 @@ namespace Juridico.Subsidios.Nucleo.Infrastucture.Services
         public List<StatusProcessamentoModel> ProcessarInformacaoAdicional(string codigo, string codigoProcesso, string codigoTipoInformacaoAdicional)
         {
             var listaStatus = new List<StatusProcessamentoModel>();
-            var cliente = clienteGateway.ObterDadosVeiculo(codigo);
+            var cliente = clienteGateway.ObterDadosCliente(codigo);
             var statusBusca = (cliente is null || string.IsNullOrEmpty(cliente.CodigoCliente))
                                          ? StatusUtil.FALHA_INFOADD_BUSCA_SUBSIDIOS
                                          : StatusUtil.OK_INFOADD_BUSCA_SUBSIDIOS;
