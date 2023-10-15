@@ -15,10 +15,30 @@ namespace Juridico.Subsidios.Nucleo.Infrastucture.Gateways
 
         public async Task<string> InserirDocumento(DocumentoAclModel documento)
         {
-            var url = _httpClient.BaseAddress.AbsoluteUri + $"/api/v1/Processo/Documento";
-            var content = new StringContent(documento.ToString(), Encoding.UTF8, "application/json");
-            var result = await _httpClient.PostAsync(url, content);
+           var result = await Post("/Documento",documento.ToString());
             return await result.Content.ReadAsStringAsync();
         }
+
+        public async Task<string> InserirInformacaoAdicional(InformacaoAdicionalAclModel informacaoAdicional)
+        {
+            var result = await Post("/InformacaoAdicional", informacaoAdicional.ToString());
+            return await result.Content.ReadAsStringAsync();
+        }
+
+        public async Task<string> InserirAndamento(AndamentoAclModel andamento)
+        {
+            var result = await Post("/Andamento", andamento.ToString());
+            return await result.Content.ReadAsStringAsync();
+        }
+
+        private async Task<HttpResponseMessage> Post(string rota, string subsidio)
+        {
+            var url = _httpClient.BaseAddress.AbsoluteUri + rota;
+            var content = new StringContent(subsidio, Encoding.UTF8, "application/json");
+            var result = await _httpClient.PostAsync(url, content);
+            return result;
+        }
+
+        
     }
 }
